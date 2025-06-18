@@ -1,5 +1,21 @@
 /*
 Theme Name: Bigjucode Portfolio
-Description: Thème FSE moderne pour portfolio de développeur  
-Version: 1.0
+Theme URI: https://github.com/bigjucode53/bigjucode-portfolio-theme
+Description: Thème WordPress FSE moderne et performant pour portfolio de développeur. Design épuré en light mode avec animations subtiles et optimisations avancées.
+Author: Bigjucode
+Author URI: https://bigjucode.com
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 8.0
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: bigjucode
+Domain Path: /languages
+Tags: blog, portfolio, full-site-editing, block-themes, custom-colors, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, wide-blocks
+*/
+
+/* 
+Ce fichier sert uniquement d'en-tête pour WordPress.
+Tous les styles CSS sont gérés via theme.json et les fichiers dans assets/css/
 */

@@ -261,3 +261,31 @@ function bigjucode_activation()
     flush_rewrite_rules();
 }
 add_action('after_switch_theme', 'bigjucode_activation');
+
+/**
+ * Enregistrer les block patterns personnalisés
+ */
+function bigjucode_register_block_patterns() {
+    // Enregistrer la catégorie
+    register_block_pattern_category(
+        'bigjucode',
+        array(
+            'label' => __('Bigjucode Patterns', 'bigjucode'),
+        )
+    );
+
+    // Charger les patterns
+    $patterns = array(
+        'hero-section',
+        'services-section', 
+        'cta-section'
+    );
+
+    foreach ($patterns as $pattern) {
+        $file = get_template_directory() . '/patterns/' . $pattern . '.php';
+        if (file_exists($file)) {
+            require_once $file;
+        }
+    }
+}
+add_action('init', 'bigjucode_register_block_patterns');

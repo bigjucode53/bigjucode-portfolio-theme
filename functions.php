@@ -17,7 +17,8 @@ define('BIGJUCODE_VERSION', '1.0.0');
 /**
  * Configuration du thème
  */
-function bigjucode_theme_setup() {
+function bigjucode_theme_setup()
+{
     // Support des langues
     load_theme_textdomain('bigjucode', get_template_directory() . '/languages');
 
@@ -54,9 +55,9 @@ function bigjucode_theme_setup() {
 
     // Support du logo personnalisé
     add_theme_support('custom-logo', array(
-        'height'      => 250,
-        'width'       => 250,
-        'flex-width'  => true,
+        'height' => 250,
+        'width' => 250,
+        'flex-width' => true,
         'flex-height' => true,
     ));
 
@@ -68,8 +69,8 @@ function bigjucode_theme_setup() {
     // Menus
     register_nav_menus(array(
         'primary' => __('Menu Principal', 'bigjucode'),
-        'footer'  => __('Menu Footer', 'bigjucode'),
-        'social'  => __('Liens Sociaux', 'bigjucode'),
+        'footer' => __('Menu Footer', 'bigjucode'),
+        'social' => __('Liens Sociaux', 'bigjucode'),
     ));
 }
 add_action('after_setup_theme', 'bigjucode_theme_setup');
@@ -77,7 +78,8 @@ add_action('after_setup_theme', 'bigjucode_theme_setup');
 /**
  * Enqueue des styles et scripts
  */
-function bigjucode_enqueue_assets() {
+function bigjucode_enqueue_assets()
+{
     // Styles
     wp_enqueue_style(
         'bigjucode-style',
@@ -102,10 +104,20 @@ function bigjucode_enqueue_assets() {
     );
 
     // Scripts
+    // GSAP Library
+    wp_enqueue_script(
+        'gsap',
+        'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js',
+        array(),
+        '3.12.2',
+        true
+    );
+
+    // Script principal (doit être après GSAP)
     wp_enqueue_script(
         'bigjucode-main',
         get_template_directory_uri() . '/assets/js/main.js',
-        array(),
+        array('gsap'),  // Dépendance GSAP
         BIGJUCODE_VERSION,
         true
     );
@@ -113,11 +125,11 @@ function bigjucode_enqueue_assets() {
     // Variables pour JavaScript
     wp_localize_script('bigjucode-main', 'bigjucodeData', array(
         'ajaxUrl' => admin_url('admin-ajax.php'),
-        'nonce'   => wp_create_nonce('bigjucode_nonce'),
-        'theme'   => array(
-            'name'    => get_template(),
+        'nonce' => wp_create_nonce('bigjucode_nonce'),
+        'theme' => array(
+            'name' => get_template(),
             'version' => BIGJUCODE_VERSION,
-            'uri'     => get_template_directory_uri(),
+            'uri' => get_template_directory_uri(),
         ),
     ));
 
@@ -131,7 +143,8 @@ add_action('wp_enqueue_scripts', 'bigjucode_enqueue_assets');
 /**
  * Enqueue des assets admin
  */
-function bigjucode_admin_assets($hook) {
+function bigjucode_admin_assets($hook)
+{
     wp_enqueue_style(
         'bigjucode-admin',
         get_template_directory_uri() . '/assets/css/admin.css',
@@ -144,20 +157,21 @@ add_action('admin_enqueue_scripts', 'bigjucode_admin_assets');
 /**
  * Ajouter des classes CSS au body
  */
-function bigjucode_body_classes($classes) {
+function bigjucode_body_classes($classes)
+{
     // Ajouter la classe du thème
     $classes[] = 'bigjucode-theme';
-    
+
     // Classe pour mobile
     if (wp_is_mobile()) {
         $classes[] = 'is-mobile';
     }
-    
+
     // Classe pour la page d'accueil
     if (is_front_page()) {
         $classes[] = 'is-front-page';
     }
-    
+
     return $classes;
 }
 add_filter('body_class', 'bigjucode_body_classes');
@@ -165,32 +179,33 @@ add_filter('body_class', 'bigjucode_body_classes');
 /**
  * Personnalisation de l'éditeur Gutenberg
  */
-function bigjucode_editor_settings() {
+function bigjucode_editor_settings()
+{
     // Palette de couleurs pour l'éditeur
     add_theme_support('editor-color-palette', array(
         array(
-            'name'  => __('Primary', 'bigjucode'),
-            'slug'  => 'primary',
+            'name' => __('Primary', 'bigjucode'),
+            'slug' => 'primary',
             'color' => '#3b82f6',
         ),
         array(
-            'name'  => __('Secondary', 'bigjucode'),
-            'slug'  => 'secondary',
+            'name' => __('Secondary', 'bigjucode'),
+            'slug' => 'secondary',
             'color' => '#10b981',
         ),
         array(
-            'name'  => __('Accent', 'bigjucode'),
-            'slug'  => 'accent',
+            'name' => __('Accent', 'bigjucode'),
+            'slug' => 'accent',
             'color' => '#f59e0b',
         ),
         array(
-            'name'  => __('Dark', 'bigjucode'),
-            'slug'  => 'dark',
+            'name' => __('Dark', 'bigjucode'),
+            'slug' => 'dark',
             'color' => '#1f2937',
         ),
         array(
-            'name'  => __('Light', 'bigjucode'),
-            'slug'  => 'light',
+            'name' => __('Light', 'bigjucode'),
+            'slug' => 'light',
             'color' => '#f9fafb',
         ),
     ));
@@ -240,7 +255,8 @@ remove_action('wp_head', 'wp_shortlink_wp_head');
 /**
  * Hooks d'activation/désactivation
  */
-function bigjucode_activation() {
+function bigjucode_activation()
+{
     // Actions lors de l'activation du thème
     flush_rewrite_rules();
 }

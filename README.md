@@ -1,355 +1,318 @@
-# 🚀 Bigjucode Portfolio - Thème WordPress FSE
+# 🚀 Bigjucode Portfolio - Thème WordPress FSE avec Blocs Personnalisés
 
-> Thème WordPress Full Site Editing moderne et performant pour portfolio de développeur
+> Thème WordPress Full Site Editing moderne avec blocs Gutenberg personnalisés pour portfolio de développeur
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)
 ![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-blue.svg)
 ![PHP](https://img.shields.io/badge/PHP-8.0%2B-purple.svg)
 ![FSE](https://img.shields.io/badge/FSE-Full%20Site%20Editing-green.svg)
-![License](https://img.shields.io/badge/license-GPL%20v2-green.svg)
-
-## 📋 Table des matières
-
-- [Vue d'ensemble](#vue-densemble)
-- [Fonctionnalités](#fonctionnalités)
-- [Installation](#installation)
-- [Structure du projet](#structure-du-projet)
-- [Configuration](#configuration)
-- [Développement local](#développement-local)
-- [Personnalisation](#personnalisation)
-- [Déploiement](#déploiement)
-- [Contribution](#contribution)
+![Gutenberg](https://img.shields.io/badge/Gutenberg-Custom%20Blocks-orange.svg)
 
 ## 🎯 Vue d'ensemble
 
-**Bigjucode Portfolio** est un thème WordPress Full Site Editing (FSE) spécialement conçu pour créer un portfolio de développeur extraordinaire. Il combine design moderne en light mode, performance optimale et facilité d'utilisation.
+**Bigjucode Portfolio v2** révolutionne l'expérience de création avec des **blocs Gutenberg personnalisés** offrant une interface d'édition intuitive similaire aux blocs WordPress natifs.
+
+### 🌟 Nouveautés v2.0
+- **🧩 Blocs personnalisés** avec interface d'édition native
+- **⚙️ Panels de configuration** intégrés à droite
+- **👁️ Aperçu en temps réel** dans l'éditeur
+- **🎨 Customisation avancée** sans code
 
 ### ✨ Caractéristiques principales
-- **100% FSE** : Édition complète via l'éditeur WordPress Gutenberg
-- **Design moderne** : Interface épurée en light mode avec animations subtiles
-- **Performance optimisée** : Code léger, Core Web Vitals optimisés
-- **Mobile-first** : Design responsive parfait sur tous les appareils
-- **SEO-friendly** : Structure sémantique et optimisations intégrées
-- **Accessibilité** : Conforme aux standards WCAG 2.1
+- **100% FSE** : Édition complète via Gutenberg
+- **Blocs sur mesure** : Hero Vitraux, Services, CTA personnalisés
+- **Interface native** : Comme les blocs WordPress standards
+- **Performance optimisée** : Code léger et rapide
+- **Mobile-first** : Responsive parfait
 
-## 🎨 Fonctionnalités
+## 🧩 Blocs Personnalisés
 
-### Design & Interface
-- ✅ **Light mode** avec palette de couleurs harmonieuse
-- ✅ **Typographie soignée** avec Google Fonts (Inter)
-- ✅ **Animations CSS** subtiles et fluides
-- ✅ **Micro-interactions** engageantes
-- ✅ **Effets hover** avancés
-- ✅ **Icons** intégrés avec emojis
+### **🏛️ Hero Vitraux**
+Bloc d'en-tête avec vitraux d'église et vidéo de fond
+- **Panel vidéo** : URL personnalisable
+- **Panel vitraux** : 6 images uploadables via médiathèque
+- **Panel contenu** : Titre, sous-titre, boutons
+- **Responsive** : 2-6 vitraux selon l'écran
 
-### Structure & Pages
-- ✅ **Page d'accueil** : Hero section + présentation des services
-- ✅ **Templates FSE** : index.html, front-page.html
-- ✅ **Template parts** : header.html, footer.html modulaires
-- ✅ **Navigation responsive** avec menu mobile
-- ✅ **Footer complet** avec liens sociaux et informations
+### **⚡ Services Section**
+Grille de services avec icônes et descriptions
+- **Panel services** : Jusqu'à 6 services
+- **Panel design** : Couleurs, espacements, animations
+- **Panel contenu** : Titres, descriptions, boutons
 
-### Technique
-- ✅ **theme.json** complet avec toutes les configurations FSE
-- ✅ **Palette de couleurs** personnalisée (Primary, Secondary, Accent)
-- ✅ **Espacements** harmonieux avec système de grille
-- ✅ **Typographies** multiples (Inter, Playfair, Fira Code)
-- ✅ **Support complet** des blocs Gutenberg
-- ✅ **Optimisations** de performance intégrées
-
-## 🚀 Installation
-
-### Prérequis
-- **WordPress** 6.0 ou supérieur
-- **PHP** 8.0 ou supérieur
-- **Environnement de développement** : Local, XAMPP, MAMP, ou serveur
-
-### Installation via Git
-```bash
-# Cloner le repository
-git clone https://github.com/bigjucode53/bigjucode-portfolio-theme.git
-
-# Copier dans le dossier themes de WordPress
-cp -r bigjucode-portfolio-theme /path/to/wordpress/wp-content/themes/bigjucode-theme
-```
-
-### Installation manuelle
-1. Télécharger le ZIP depuis GitHub
-2. Extraire dans `/wp-content/themes/bigjucode-theme/`
-3. Aller dans **Apparence > Thèmes** dans l'admin WordPress
-4. Activer le thème **"Bigjucode Portfolio"**
+### **🎯 Call to Action**
+Section d'appel à l'action avec gradient
+- **Panel design** : Couleurs de fond, gradients
+- **Panel contenu** : Titre, description, boutons
+- **Panel contact** : Informations de contact
 
 ## 📁 Structure du projet
 
 ```
 bigjucode-theme/
-├── 📄 style.css                 # En-tête du thème WordPress
-├── 📄 index.php                 # Fallback PHP pour compatibilité
-├── 📄 functions.php             # Fonctionnalités et hooks WordPress
-├── 📄 theme.json                # Configuration FSE complète
-├── 📄 README.md                 # Documentation du projet
-├── 📄 LICENSE                   # Licence GPL v2
-├── 📄 .gitignore               # Fichiers à ignorer par Git
+├── 📄 style.css                    # En-tête du thème
+├── 📄 index.php                    # Fallback PHP  
+├── 📄 functions.php                # Hooks WordPress
+├── 📄 theme.json                   # Configuration FSE
+├── 📄 README.md                    # Documentation
 │
-├── 📁 templates/               # Templates de pages FSE
-│   ├── 📄 index.html           # Template de base
-│   ├── 📄 front-page.html      # Page d'accueil
-│   ├── 📄 page.html            # Pages statiques (à venir)
-│   ├── 📄 single.html          # Articles individuels (à venir)
-│   └── 📄 404.html             # Page d'erreur (à venir)
+├── 📁 templates/                   # Templates FSE
+│   ├── 📄 index.html              # Template de base
+│   ├── 📄 front-page.html         # Page d'accueil
+│   └── 📄 page.html               # Pages statiques
 │
-├── 📁 parts/                   # Template parts réutilisables
-│   ├── 📄 header.html          # En-tête avec navigation
-│   ├── 📄 footer.html          # Pied de page complet
-│   └── 📄 navigation.html      # Navigation (à venir)
+├── 📁 parts/                      # Template parts
+│   ├── 📄 header.html             # En-tête
+│   └── 📄 footer.html             # Pied de page
 │
-├── 📁 patterns/                # Block patterns personnalisés
-│   ├── 📄 hero-section.php     # Section hero (à venir)
-│   ├── 📄 services-grid.php    # Grille de services (à venir)
-│   └── 📄 contact-form.php     # Formulaire de contact (à venir)
+├── 📁 blocks/                     # 🆕 Blocs personnalisés
+│   ├── 📁 hero-vitraux/
+│   │   ├── 📄 block.json          # Configuration du bloc
+│   │   ├── 📄 edit.js             # Interface d'édition
+│   │   ├── 📄 save.js             # Rendu frontend
+│   │   ├── 📄 style.css           # Styles frontend
+│   │   └── 📄 editor.css          # Styles éditeur
+│   │
+│   ├── 📁 services-section/
+│   │   ├── 📄 block.json
+│   │   ├── 📄 edit.js
+│   │   ├── 📄 save.js
+│   │   ├── 📄 style.css
+│   │   └── 📄 editor.css
+│   │
+│   └── 📁 cta-section/
+│       ├── 📄 block.json
+│       ├── 📄 edit.js
+│       ├── 📄 save.js
+│       ├── 📄 style.css
+│       └── 📄 editor.css
 │
-├── 📁 assets/                  # Ressources statiques
+├── 📁 assets/                     # Ressources
 │   ├── 📁 css/
-│   │   ├── 📄 main.css         # Styles principaux (à développer)
-│   │   ├── 📄 editor-style.css # Styles pour l'éditeur (à développer)
-│   │   └── 📄 admin.css        # Styles admin (à développer)
+│   │   ├── 📄 main.css           # Styles principaux
+│   │   ├── 📄 editor-style.css   # Styles éditeur
+│   │   └── 📄 admin.css          # Styles admin
 │   ├── 📁 js/
-│   │   ├── 📄 main.js          # JavaScript principal (à développer)
-│   │   └── 📄 admin.js         # JavaScript admin (à développer)
-│   ├── 📁 images/              # Images du thème
-│   └── 📁 fonts/               # Polices personnalisées
+│   │   ├── 📄 main.js            # JavaScript principal
+│   │   └── 📄 blocks.js          # 🆕 Script blocs
+│   └── 📁 images/                # Images du thème
 │
-├── 📁 inc/                     # Fichiers PHP inclus
-│   ├── 📄 customizer.php       # Customizer WordPress (à développer)
-│   ├── 📄 template-functions.php # Fonctions de template (à développer)
-│   ├── 📄 block-patterns.php   # Enregistrement des patterns (à développer)
-│   └── 📄 block-styles.php     # Styles de blocs personnalisés (à développer)
+├── 📁 inc/                       # Fichiers PHP
+│   ├── 📄 blocks.php            # 🆕 Enregistrement blocs
+│   ├── 📄 customizer.php        # Customizer
+│   └── 📄 template-functions.php # Fonctions
 │
-└── 📁 languages/               # Fichiers de traduction (à venir)
+└── 📁 languages/                 # Traductions
 ```
 
-## ⚙️ Configuration
+## ⚙️ Interface d'édition
 
-### Activation du thème
-1. **Aller dans l'admin WordPress** : `yoursite.local/wp-admin`
-2. **Apparence > Thèmes**
-3. **Activer "Bigjucode Portfolio"**
-4. **Apparence > Éditeur de site** pour personnaliser
+### **🎨 Expérience utilisateur**
+Chaque bloc offre une interface similaire aux blocs WordPress natifs :
 
-### Configuration des pages
-```
-📄 Accueil (page statique) - Utilise front-page.html
-📁 Mon savoir-faire (page parente)
-  └── 📄 Développement Web (page enfant)
-  └── 📄 Applications Mobile (page enfant)  
-  └── 📄 Consulting (page enfant)
-  └── 📄 Design UX/UI (page enfant)
-📄 Contact
-📄 Blog (optionnel)
-```
+**Zone d'aperçu (gauche)** :
+- Rendu en temps réel du bloc
+- Interactions directes possibles
+- Aperçu responsive
 
-### Réglages WordPress recommandés
-```php
-// Dans Réglages > Lecture
-Page d'accueil : Une page statique
-Page d'accueil : Accueil
-Page des articles : Blog
+**Panels de configuration (droite)** :
+- **Panel Contenu** : Textes, liens, boutons
+- **Panel Média** : Images, vidéos, icônes  
+- **Panel Design** : Couleurs, espacements, animations
+- **Panel Avancé** : CSS personnalisé, attributs
 
-// Dans Réglages > Permaliens
-Structure personnalisée : /%postname%/
-```
+### **📱 Responsive intégré**
+- **Mobile** : Interface adaptée tactile
+- **Tablet** : Optimisations spécifiques
+- **Desktop** : Expérience complète
 
-## 💻 Développement local
+## 🚀 Installation et configuration
 
-### Environnement Local (recommandé)
-Ce thème a été développé avec **Local by Flywheel** :
-
+### Installation
 ```bash
-# Chemin du thème dans Local
-~/Local Sites/bigjucode/app/public/wp-content/themes/bigjucode-theme/
+# Cloner le repository
+git clone https://github.com/bigjucode53/bigjucode-portfolio-theme.git
 
-# Workflow de développement
-1. Développer dans Local (localhost)
-2. Tester en temps réel sur bigjucode.local
-3. Commit et push sur GitHub
-4. Déployer en production
+# Aller dans le dossier
+cd bigjucode-portfolio-theme
+
+# Installer les dépendances (si build process)
+npm install
+
+# Build des blocs (si nécessaire)
+npm run build
 ```
 
-### Git workflow
-```bash
-# Développement quotidien
-git add .
-git commit -m "feat: add new template"
-git push origin main
+### Activation
+1. Copier dans `/wp-content/themes/bigjucode-theme/`
+2. **Apparence > Thèmes** → Activer
+3. **Apparence > Éditeur de site** → Utiliser les blocs
 
-# Créer une branche pour nouvelle fonctionnalité
-git checkout -b feature/contact-page
-# ... développer ...
-git commit -m "feat: add contact page template"
-git checkout main
-git merge feature/contact-page
-git push origin main
-```
+## 🛠️ Développement de blocs
 
-## 🎨 Personnalisation
+### Structure d'un bloc
+```javascript
+// blocks/hero-vitraux/edit.js
+import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, TextControl, MediaUpload } from '@wordpress/components';
 
-### Via l'éditeur de site
-1. **Apparence > Éditeur de site**
-2. **Styles** pour modifier couleurs/typographies
-3. **Templates** pour éditer les mises en page
-4. **Patterns** pour ajouter des sections prêtes
-
-### Via theme.json
-```json
-{
-  "styles": {
-    "color": {
-      "background": "#ffffff",
-      "text": "#1f2937"
-    },
-    "typography": {
-      "fontFamily": "var(--wp--preset--font-family--inter)"
-    }
-  }
+export default function Edit({ attributes, setAttributes }) {
+    const blockProps = useBlockProps();
+    
+    return (
+        <>
+            {/* Panels de configuration (droite) */}
+            <InspectorControls>
+                <PanelBody title="Configuration Vidéo">
+                    <TextControl
+                        label="URL Vidéo"
+                        value={attributes.videoUrl}
+                        onChange={(value) => setAttributes({ videoUrl: value })}
+                    />
+                </PanelBody>
+                
+                <PanelBody title="Vitraux">
+                    <MediaUpload
+                        onSelect={(media) => setAttributes({ vitrail1: media })}
+                        render={({ open }) => (
+                            <Button onClick={open}>
+                                Choisir Vitrail 1
+                            </Button>
+                        )}
+                    />
+                </PanelBody>
+            </InspectorControls>
+            
+            {/* Aperçu (gauche) */}
+            <div {...blockProps}>
+                <div className="hero-preview">
+                    {/* Rendu d'aperçu du bloc */}
+                </div>
+            </div>
+        </>
+    );
 }
 ```
 
-### Couleurs du thème
+### Build process
+```bash
+# Développement avec watch
+npm run dev
+
+# Build production
+npm run build
+
+# Linter
+npm run lint
+```
+
+## 🎯 Utilisation
+
+### **Créer une page**
+1. **Pages > Ajouter**
+2. **Cliquer sur +** pour ajouter un bloc
+3. **Catégorie "Bigjucode"** → Choisir votre bloc
+4. **Configurer** via les panels de droite
+5. **Publier**
+
+### **Blocs disponibles**
+- **🏛️ Hero Vitraux** : Bannière principale
+- **⚡ Services** : Présentation des services  
+- **🎯 CTA** : Appel à l'action
+- *(Plus de blocs à venir)*
+
+## 🔧 Personnalisation avancée
+
+### **CSS personnalisé**
 ```css
+/* Cibler un bloc spécifique */
+.wp-block-bigjucode-hero-vitraux {
+    /* Vos styles */
+}
+
+/* Variables CSS disponibles */
 :root {
-  --wp--preset--color--base: #ffffff;       /* Fond principal */
-  --wp--preset--color--contrast: #1f2937;   /* Texte principal */
-  --wp--preset--color--primary: #3b82f6;    /* Couleur principale */
-  --wp--preset--color--secondary: #10b981;  /* Couleur secondaire */
-  --wp--preset--color--accent: #f59e0b;     /* Couleur d'accent */
-  --wp--preset--color--light-gray: #f3f4f6; /* Gris clair */
-  --wp--preset--color--medium-gray: #6b7280; /* Gris moyen */
+    --bigjucode-primary: #3b82f6;
+    --bigjucode-secondary: #10b981;
+    --bigjucode-accent: #f59e0b;
 }
 ```
 
-### Typographies
-- **Primary** : Inter (Google Fonts) - Interface et contenu
-- **Secondary** : Playfair Display - Titres élégants
-- **Monospace** : Fira Code - Code et technique
+### **Hooks PHP disponibles**
+```php
+// Modifier les attributs d'un bloc
+add_filter('bigjucode_hero_vitraux_attributes', function($attributes) {
+    // Vos modifications
+    return $attributes;
+});
 
-## 🚀 Déploiement
-
-### Via FTP/SFTP
-```bash
-# Upload du dossier complet
-/wp-content/themes/bigjucode-theme/
+// Ajouter des styles personnalisés
+add_action('wp_enqueue_scripts', function() {
+    wp_enqueue_style('my-custom-blocks', get_stylesheet_directory_uri() . '/custom-blocks.css');
+});
 ```
-
-### Via Git sur serveur
-```bash
-# Sur le serveur de production
-cd /path/to/wp-content/themes/
-git clone https://github.com/bigjucode53/bigjucode-portfolio-theme.git bigjucode-theme
-```
-
-### Optimisations production
-- **Minifier** les CSS/JS
-- **Optimiser** les images
-- **Activer** la mise en cache
-- **Configurer** un CDN
-- **Tester** les Core Web Vitals
 
 ## 📊 Performance
 
-### Optimisations intégrées
-- ✅ **CSS optimisé** avec variables CSS natives
-- ✅ **JavaScript minimal** et différé
-- ✅ **Images lazy-loading** automatique
-- ✅ **Fonts preload** pour Google Fonts
-- ✅ **Code propre** sans jQuery
-- ✅ **Sémantique HTML5** parfaite
+### **Optimisations intégrées**
+- ✅ **Lazy loading** des ressources
+- ✅ **Code splitting** par bloc
+- ✅ **Minification** automatique
+- ✅ **Cache** intelligent
+- ✅ **Core Web Vitals** optimisés
 
-### Métriques cibles
-- **First Contentful Paint** : < 1.5s
-- **Largest Contentful Paint** : < 2.5s
-- **Cumulative Layout Shift** : < 0.1
-- **First Input Delay** : < 100ms
-
-## 🔍 SEO
-
-### Optimisations intégrées
-- ✅ **Structure sémantique** HTML5
-- ✅ **Métadonnées** Open Graph et Twitter Cards
-- ✅ **Schema.org** markup
-- ✅ **Breadcrumbs** automatiques
-- ✅ **Sitemap XML** généré automatiquement
-- ✅ **URLs propres** et optimisées
-
-## 🛠️ Technologies utilisées
-
-- **WordPress** 6.0+ avec FSE
-- **PHP** 8.0+ (orienté objet)
-- **HTML5** sémantique
-- **CSS3** avec variables natives
-- **JavaScript** ES6+ vanilla
-- **Git** pour le versioning
-- **Local** pour le développement
+### **Métriques cibles**
+- **LCP** : < 2.5s
+- **FID** : < 100ms  
+- **CLS** : < 0.1
+- **Performance Score** : > 90
 
 ## 🤝 Contribution
 
-### Comment contribuer
-1. **Fork** le repository
-2. **Créer une branche** : `git checkout -b feature/amazing-feature`
-3. **Commit** : `git commit -m 'Add amazing feature'`
-4. **Push** : `git push origin feature/amazing-feature`
-5. **Pull Request** avec description détaillée
+### **Créer un nouveau bloc**
+```bash
+# Scaffold d'un nouveau bloc
+npm run create-block mon-nouveau-bloc
 
-### Standards de code
-- **PHP** : WordPress Coding Standards
-- **CSS** : BEM methodology
+# Structure générée automatiquement
+blocks/mon-nouveau-bloc/
+├── block.json
+├── edit.js
+├── save.js
+├── style.css
+└── editor.css
+```
+
+### **Guidelines de développement**
+- **Code** : WordPress Coding Standards
 - **JavaScript** : ESLint + Prettier
+- **CSS** : BEM methodology
 - **Git** : Conventional Commits
 
-### Roadmap
-- [ ] Templates pour toutes les pages
-- [ ] Block patterns personnalisés
-- [ ] Animations CSS avancées
-- [ ] Mode sombre (dark mode)
-- [ ] Multilingue (i18n)
-- [ ] Optimisations Core Web Vitals
-- [ ] Tests automatisés
+## 📈 Roadmap v2.1
+
+- [ ] **🎨 Block Variations** : Variations de style par bloc
+- [ ] **🔄 Block Transforms** : Conversion entre blocs
+- [ ] **📱 Mobile Editor** : Interface mobile optimisée
+- [ ] **🌐 Traductions** : Support multilingue complet
+- [ ] **🎭 Animations** : Système d'animations avancé
+- [ ] **📊 Analytics** : Tracking d'utilisation des blocs
 
 ## 📞 Support
 
-- **Email** : contact@bigjucode.com
-- **GitHub Issues** : [Signaler un bug](https://github.com/bigjucode53/bigjucode-portfolio-theme/issues)
-- **Documentation** : [Wiki du projet](https://github.com/bigjucode53/bigjucode-portfolio-theme/wiki)
-
-## 📄 Licence
-
-Ce projet est sous licence **GPL v2 or later** - voir le fichier [LICENSE](LICENSE) pour plus de détails.
-
-```
-Copyright (C) 2025 Bigjucode
-
-This program is free software; you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2 of the License, or
-(at your option) any later version.
-```
-
-## 🙏 Remerciements
-
-- **WordPress Team** pour l'écosystème FSE
-- **Gutenberg Team** pour l'éditeur de blocs
-- **Local Team** pour l'environnement de développement
-- **Community** pour les retours et contributions
+- **📧 Email** : contact@bigjucode.com
+- **🐛 Issues** : [GitHub Issues](https://github.com/bigjucode53/bigjucode-portfolio-theme/issues)
+- **📖 Documentation** : [Wiki complet](https://github.com/bigjucode53/bigjucode-portfolio-theme/wiki)
+- **💬 Discord** : [Communauté Bigjucode](#)
 
 ---
 
-## 📈 Statistiques du projet
+## 🏆 Crédits
 
-![GitHub last commit](https://img.shields.io/github/last-commit/bigjucode53/bigjucode-portfolio-theme)
-![GitHub issues](https://img.shields.io/github/issues/bigjucode53/bigjucode-portfolio-theme)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/bigjucode53/bigjucode-portfolio-theme)
+Développé avec ❤️ par **[Bigjucode](https://bigjucode.com)**
 
-**Développé avec ❤️ par [Bigjucode](https://bigjucode.com)**
+*Révolutionnons ensemble l'expérience WordPress !*
 
 ---
 
-*Pour plus d'informations, visitez [le repository GitHub](https://github.com/bigjucode53/bigjucode-portfolio-theme)*
+**Version 2.0.0** - Janvier 2025

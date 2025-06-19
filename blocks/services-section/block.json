@@ -2,33 +2,24 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "bigjucode/services-section",
-  "title": "Section Services",
-  "category": "bigjucode", 
+  "title": "Services Section",
+  "category": "bigjucode",
   "icon": "grid-view",
-  "description": "Grille de services avec icônes et descriptions personnalisables",
+  "description": "Grille de services avec icônes",
   "keywords": ["services", "grille", "portfolio"],
   "supports": {
-    "align": ["wide", "full"],
-    "spacing": {
-      "margin": true,
-      "padding": true
-    }
+    "align": ["wide", "full"]
   },
   "attributes": {
     "title": {
       "type": "string",
-      "default": "Mon Savoir-faire"
+      "default": "Mes Services"
     },
     "subtitle": {
-      "type": "string", 
-      "default": "Des solutions techniques modernes et performantes"
-    },
-    "backgroundColor": {
       "type": "string",
-      "default": "#f3f4f6"
+      "default": "Solutions complètes pour vos projets digitaux"
     }
   },
   "editorScript": "file:./edit.js",
-  "editorStyle": "file:./editor.css", 
   "style": "file:./style.css"
 }

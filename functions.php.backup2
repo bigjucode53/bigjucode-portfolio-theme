@@ -221,31 +221,3 @@ if (defined('WP_DEBUG') && WP_DEBUG) {
     add_action('wp_footer', 'bigjucode_debug_blocks');
     add_action('admin_footer', 'bigjucode_debug_blocks');
 }
-
-/**
- * Enqueue des assets buildés pour les blocs (ajouté automatiquement)
- */
-function bigjucode_enqueue_block_assets() {
-    $asset_file = BIGJUCODE_THEME_DIR . '/build/index.asset.php';
-    
-    if (file_exists($asset_file)) {
-        $asset = include $asset_file;
-        
-        wp_enqueue_script(
-            'bigjucode-blocks',
-            BIGJUCODE_THEME_URI . '/build/index.js',
-            $asset['dependencies'],
-            $asset['version'],
-            true
-        );
-
-        wp_enqueue_style(
-            'bigjucode-blocks-style',
-            BIGJUCODE_THEME_URI . '/build/style-index.css',
-            array(),
-            $asset['version']
-        );
-    }
-}
-add_action('enqueue_block_editor_assets', 'bigjucode_enqueue_block_assets');
-add_action('wp_enqueue_scripts', 'bigjucode_enqueue_block_assets');

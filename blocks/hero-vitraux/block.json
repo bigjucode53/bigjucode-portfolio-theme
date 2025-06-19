@@ -5,37 +5,77 @@
   "title": "Hero avec Vitraux",
   "category": "bigjucode",
   "icon": "format-image",
-  "description": "Section hero avec vitraux d'église et vidéo de fond personnalisable",
-  "keywords": ["hero", "vitraux", "vidéo", "église"],
+  "description": "Section hero avec vitraux d'église et vidéo de fond",
+  "keywords": ["hero", "vitraux", "vidéo", "bannière"],
   "supports": {
     "align": ["wide", "full"],
     "spacing": {
-      "margin": true,
-      "padding": true
-    }
+      "margin": false,
+      "padding": false
+    },
+    "color": false
   },
   "attributes": {
-    "videoUrl": {
-      "type": "string",
-      "default": "https://videos.pexels.com/video-files/1851190/1851190-uhd_2560_1440_25fps.mp4"
-    },
     "title": {
-      "type": "string", 
-      "default": "Créateur d'Expériences Sacrées"
+      "type": "string",
+      "default": "Développeur Full Stack"
     },
     "subtitle": {
-      "type": "string",
-      "default": "Développeur passionné alliant technologie moderne et art spirituel"
+      "type": "string", 
+      "default": "Créateur d'expériences digitales uniques"
     },
-    "vitrail1": { "type": "object", "default": {} },
-    "vitrail2": { "type": "object", "default": {} },
-    "vitrail3": { "type": "object", "default": {} },
-    "vitrail4": { "type": "object", "default": {} },
-    "vitrail5": { "type": "object", "default": {} },
-    "vitrail6": { "type": "object", "default": {} }
+    "videoUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "overlayOpacity": {
+      "type": "number",
+      "default": 30
+    },
+    "vitrail1": {
+      "type": "object",
+      "default": null
+    },
+    "vitrail2": {
+      "type": "object", 
+      "default": null
+    },
+    "vitrail3": {
+      "type": "object",
+      "default": null
+    },
+    "vitrail4": {
+      "type": "object",
+      "default": null
+    },
+    "vitrail5": {
+      "type": "object",
+      "default": null
+    },
+    "vitrail6": {
+      "type": "object",
+      "default": null
+    },
+    "showCTAButton": {
+      "type": "boolean",
+      "default": true
+    },
+    "ctaText": {
+      "type": "string",
+      "default": "Découvrir mes projets"
+    },
+    "ctaUrl": {
+      "type": "string",
+      "default": "#portfolio"
+    }
   },
-  "editorScript": "file:./edit.js",
-  "script": "file:./script.js",
-  "editorStyle": "file:./editor.css",
-  "style": "file:./style.css"
+  "example": {
+    "attributes": {
+      "title": "Développeur Full Stack",
+      "subtitle": "Créateur d'expériences digitales uniques",
+      "videoUrl": "https://example.com/nature.mp4",
+      "showCTAButton": true,
+      "ctaText": "Voir mon travail"
+    }
+  }
 }

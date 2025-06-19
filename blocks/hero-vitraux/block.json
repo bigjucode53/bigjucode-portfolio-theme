@@ -2,80 +2,15 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "bigjucode/hero-vitraux",
-  "title": "Hero avec Vitraux",
-  "category": "bigjucode",
+  "title": "Hero Simple",
+  "category": "widgets",
   "icon": "format-image",
-  "description": "Section hero avec vitraux d'église et vidéo de fond",
-  "keywords": ["hero", "vitraux", "vidéo", "bannière"],
-  "supports": {
-    "align": ["wide", "full"],
-    "spacing": {
-      "margin": false,
-      "padding": false
-    },
-    "color": false
-  },
+  "description": "Section hero simple",
   "attributes": {
-    "title": {
-      "type": "string",
-      "default": "Développeur Full Stack"
-    },
-    "subtitle": {
-      "type": "string", 
-      "default": "Créateur d'expériences digitales uniques"
-    },
-    "videoUrl": {
-      "type": "string",
-      "default": ""
-    },
-    "overlayOpacity": {
-      "type": "number",
-      "default": 30
-    },
-    "vitrail1": {
-      "type": "object",
-      "default": null
-    },
-    "vitrail2": {
-      "type": "object", 
-      "default": null
-    },
-    "vitrail3": {
-      "type": "object",
-      "default": null
-    },
-    "vitrail4": {
-      "type": "object",
-      "default": null
-    },
-    "vitrail5": {
-      "type": "object",
-      "default": null
-    },
-    "vitrail6": {
-      "type": "object",
-      "default": null
-    },
-    "showCTAButton": {
-      "type": "boolean",
-      "default": true
-    },
-    "ctaText": {
-      "type": "string",
-      "default": "Découvrir mes projets"
-    },
-    "ctaUrl": {
-      "type": "string",
-      "default": "#portfolio"
-    }
+    "title": { "type": "string", "default": "Développeur Full Stack" },
+    "subtitle": { "type": "string", "default": "Créateur d'expériences digitales" }
   },
-  "example": {
-    "attributes": {
-      "title": "Développeur Full Stack",
-      "subtitle": "Créateur d'expériences digitales uniques",
-      "videoUrl": "https://example.com/nature.mp4",
-      "showCTAButton": true,
-      "ctaText": "Voir mon travail"
-    }
-  }
+  "editorScript": "file:./edit.js",
+  "script": "file:./save.js",
+  "style": "file:./style.css"
 }

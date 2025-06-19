@@ -2,24 +2,14 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "bigjucode/services-section",
-  "title": "Services Section",
-  "category": "bigjucode",
+  "title": "Services Simple",
+  "category": "widgets",
   "icon": "grid-view",
-  "description": "Grille de services avec icônes",
-  "keywords": ["services", "grille", "portfolio"],
-  "supports": {
-    "align": ["wide", "full"]
-  },
+  "description": "Section services",
   "attributes": {
-    "title": {
-      "type": "string",
-      "default": "Mes Services"
-    },
-    "subtitle": {
-      "type": "string",
-      "default": "Solutions complètes pour vos projets digitaux"
-    }
+    "title": { "type": "string", "default": "Mes Services" }
   },
   "editorScript": "file:./edit.js",
+  "script": "file:./save.js",
   "style": "file:./style.css"
 }

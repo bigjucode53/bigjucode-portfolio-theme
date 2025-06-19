@@ -2,24 +2,15 @@
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
   "name": "bigjucode/cta-section",
-  "title": "Call to Action",
-  "category": "bigjucode",
-  "icon": "megaphone", 
-  "description": "Section d'appel à l'action avec gradient et boutons",
-  "keywords": ["cta", "bouton", "contact"],
-  "supports": {
-    "align": ["wide", "full"]
-  },
+  "title": "CTA Simple",
+  "category": "widgets",
+  "icon": "megaphone",
+  "description": "Call to action",
   "attributes": {
-    "title": {
-      "type": "string",
-      "default": "Prêt à collaborer ?"
-    },
-    "description": {
-      "type": "string",
-      "default": "Transformons ensemble vos idées en solutions techniques exceptionnelles"
-    }
+    "title": { "type": "string", "default": "Prêt à collaborer ?" },
+    "description": { "type": "string", "default": "Contactez-moi pour vos projets" }
   },
   "editorScript": "file:./edit.js",
+  "script": "file:./save.js",
   "style": "file:./style.css"
 }

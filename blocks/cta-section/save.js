@@ -3,28 +3,30 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
 export default function Save({ attributes }) {
     const { title, description } = attributes;
     
-    const blockProps = useBlockProps.save({
-        className: 'bigjucode-cta-section'
-    });
-
     return (
-        <div {...blockProps}>
-            <div className="cta-content">
-                <RichText.Content
-                    tagName="h2"
-                    value={title}
-                    className="cta-title"
-                />
-                <RichText.Content
-                    tagName="p"
-                    value={description}
-                    className="cta-description"
-                />
-                <div className="cta-buttons">
-                    <a href="#contact" className="btn btn-primary">Contactez-moi</a>
-                    <a href="#portfolio" className="btn btn-secondary">Voir projets</a>
-                </div>
-            </div>
+        <div {...useBlockProps.save({
+            style: {
+                padding: '3rem 2rem',
+                background: 'linear-gradient(135deg, #3b82f6 0%, #10b981 100%)',
+                color: 'white',
+                textAlign: 'center',
+                borderRadius: '12px',
+                margin: '2rem 0'
+            }
+        })}>
+            <RichText.Content tagName="h2" value={title} style={{ fontSize: '2rem', marginBottom: '1rem' }} />
+            <RichText.Content tagName="p" value={description} style={{ fontSize: '1.2rem', marginBottom: '2rem' }} />
+            <a href="#contact" style={{
+                display: 'inline-block',
+                padding: '1rem 2rem',
+                background: 'white',
+                color: '#3b82f6',
+                borderRadius: '50px',
+                fontWeight: '600',
+                textDecoration: 'none'
+            }}>
+                Contactez-moi
+            </a>
         </div>
     );
 }

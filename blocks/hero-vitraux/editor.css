@@ -1,0 +1,25 @@
+.wp-block-bigjucode-hero-vitraux {
+    border: 2px dashed #3b82f6;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.editor-styles-wrapper .wp-block-bigjucode-hero-vitraux h1 {
+    margin: 0 0 1rem 0;
+}
+
+.editor-styles-wrapper .wp-block-bigjucode-hero-vitraux p {
+    margin: 0 0 1rem 0;
+}
+
+/* Interface des panels */
+.components-panel__body .components-base-control__label {
+    font-weight: 600;
+    color: #1e40af;
+}
+
+.media-upload-preview {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}

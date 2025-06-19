@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "bigjucode/hero-vitraux",
+  "title": "Hero avec Vitraux",
+  "category": "bigjucode",
+  "icon": "format-image",
+  "description": "Section hero avec vitraux d'église et vidéo de fond personnalisable",
+  "keywords": ["hero", "vitraux", "vidéo", "église"],
+  "supports": {
+    "align": ["wide", "full"],
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "attributes": {
+    "videoUrl": {
+      "type": "string",
+      "default": "https://videos.pexels.com/video-files/1851190/1851190-uhd_2560_1440_25fps.mp4"
+    },
+    "title": {
+      "type": "string", 
+      "default": "Créateur d'Expériences Sacrées"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Développeur passionné alliant technologie moderne et art spirituel"
+    },
+    "vitrail1": { "type": "object", "default": {} },
+    "vitrail2": { "type": "object", "default": {} },
+    "vitrail3": { "type": "object", "default": {} },
+    "vitrail4": { "type": "object", "default": {} },
+    "vitrail5": { "type": "object", "default": {} },
+    "vitrail6": { "type": "object", "default": {} }
+  },
+  "editorScript": "file:./edit.js",
+  "script": "file:./script.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}

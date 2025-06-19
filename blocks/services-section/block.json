@@ -1,0 +1,34 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "bigjucode/services-section",
+  "title": "Section Services",
+  "category": "bigjucode", 
+  "icon": "grid-view",
+  "description": "Grille de services avec icônes et descriptions personnalisables",
+  "keywords": ["services", "grille", "portfolio"],
+  "supports": {
+    "align": ["wide", "full"],
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Mon Savoir-faire"
+    },
+    "subtitle": {
+      "type": "string", 
+      "default": "Des solutions techniques modernes et performantes"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#f3f4f6"
+    }
+  },
+  "editorScript": "file:./edit.js",
+  "editorStyle": "file:./editor.css", 
+  "style": "file:./style.css"
+}
